@@ -3,7 +3,9 @@
 `pip3 install numpy`  
 `pip3 install termcolor`  
 
+![cv-image](img.svg)
+
 >Using moduls:  
-*cv2
-*numpy
-*termcolor
+*cv2  
+*numpy  
+*termcolor  

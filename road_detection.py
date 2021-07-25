@@ -1,10 +1,12 @@
 import cv2 as cv
 import numpy as np
 
+
 def canny(img):
     img = cv.cvtColor(img, cv.COLOR_BGR2BGRA)
     blur = cv.GaussianBlur(img, (5, 5), 0)
-    return cv.Canny(blur, 20, 150)
+    return cv.Canny(blur, 80, 150)
+
 
 def make_coordinates(image, line_parameters):
     # Y = MX + B
@@ -45,14 +47,15 @@ def display_lines(image, lines):
     line_image = np.zeros_like(image)
     if lines is not None:
         for x1, y1, x2, y2 in lines:
-            cv.line(line_image, (x1, y1), (x2, y2), (255, 0, 0), 15)
+            cv.line(line_image, (x1, y1), (x2, y2), (255, 0, 0), 5)
     return line_image
 
 
 def region_of_interest(image):
     height = image.shape[0]
 
-    polygons = np.array([(-100, height//1.7), (800, height//1.7), (12, 900), (0, 90)])
+    polygons = np.array(
+        [(400, height//1.6), (610, height//1.18), (40, height//1.18), (220, height//1.6)])
     mask = np.zeros_like(image)
     cv.fillPoly(mask, np.array([polygons], dtype=np.int64), 1024)
     masked_image = cv.bitwise_and(image, mask)

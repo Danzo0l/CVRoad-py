@@ -1,8 +1,8 @@
 #### CVRoad-py
 
 This module for cars without driver. Based on opencv.  
-For setup project you should run file "main.py" `python3 main.py`
-
+For setup project you should run file "main.py" `python3 main.py`  
+It's my first project on python in computer vision.
 
 ![cv-image](img.svg)
   

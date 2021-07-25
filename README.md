@@ -8,6 +8,6 @@
 
 
 >Using moduls:  
-* cv2  
-* numpy  
-* termcolor  
+>* cv2  
+>* numpy  
+>* termcolor  
